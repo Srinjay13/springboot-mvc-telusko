@@ -8,7 +8,7 @@
     <h1>Hello, Welcome to My JSP App from Srinjay!</h1>
     <p>This is the index.jsp page running on Internal Tomcat.</p>
 	
-	<form action="subtract" >
+	<form action="subtract" method="post">
 	        <label for="name">Enter your number 1: </label>
 	        <input type="text" id="num1" name="num1"/>
 			<label for="name">Enter your number 2: </label>
@@ -18,7 +18,7 @@
 		
 		<br>
 		<br>
-		<form action="addCoder" >
+		<form action="addCoder" method="post">
 			        <label for="coderId">Enter your id: </label>
 			        <input type="text" id="coderId" name="coderId"/>
 					<label for="coderName">Enter your name: </label>

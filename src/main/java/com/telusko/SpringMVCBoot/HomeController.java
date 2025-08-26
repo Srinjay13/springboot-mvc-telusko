@@ -1,7 +1,11 @@
 package com.telusko.SpringMVCBoot;
 
+import java.util.Arrays;
+import java.util.List;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -82,5 +86,21 @@ public class HomeController {
 		// ONE MORE IMP THING TO NOTICE is that if we want we can entirely remove @ModelAttribute if we use the same class name "Coder" in the jsp file as "coder" then it will work as it is now, but that is not a good convention
 		//m.addAttribute("coder",c);
 		return "coders";
+	}
+	
+	//If we want to use POST method, then we can simply use method="post" in the form we are using in the jsp page
+	
+    // If we want to restrict the user to only allow post in server side too, we can change this - @RequestMapping("addCoder") to @RequestMapping(value="addCoder",method=RequestMethod.POST)
+	
+	// Another way we could use @PostMapping attribute instead of RequestMapping which supports both GET and POST to avoid confusion
+	
+	
+	//Now let's see how GetMapping works by doing 
+	
+	@GetMapping("showCoders")
+	public String showCoders(Model m) {
+		List<Coder> coders = Arrays.asList(new Coder(1,"Srinjay Saha"),new Coder(2,"Sanjay Saha"));
+		m.addAttribute("result",coders);
+		return "showCoders";
 	}
 }

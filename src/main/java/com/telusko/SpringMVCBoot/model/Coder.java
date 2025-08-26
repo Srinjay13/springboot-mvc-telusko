@@ -10,6 +10,11 @@ public class Coder {
 	public int getCoderId() {
 		return coderId;
 	}
+	public Coder(int coderId, String coderName) {
+		super();
+		this.coderId = coderId;
+		this.coderName = coderName;
+	}
 	public void setCoderId(int coderId) {
 		this.coderId = coderId;
 	}
