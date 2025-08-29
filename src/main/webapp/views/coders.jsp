@@ -6,6 +6,8 @@
 </head>
 <body>
     <h1>New Coder added in the team : ${c} </h1>
+	<h2> Your individual asked coder is : ${coder} </h2>
+	<h2>Matching coders: ${result}</h2>
     <p>Thanks for using our tool. Have a nice day ${name} ahead !</p>
 </body>
 </html>

@@ -25,5 +25,18 @@
 				    <input type="text" id="coderName" name="coderName"/>
 					<input type="submit">
 			    </form>
+				
+				<br>
+										<br>
+								<form action="getCoder" method="get">
+											        Enter your id : <input type="text" name="coderId"><br>
+													<input type="submit">
+											    </form>
+												<br>
+																						<br>
+																				<form action="getCoderByName" method="get">
+																							        Enter your name : <input type="text" name="cname"><br>
+																									<input type="submit">
+																							    </form>
 </body>
 </html>

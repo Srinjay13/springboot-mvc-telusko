@@ -3,6 +3,7 @@ package com.telusko.SpringMVCBoot;
 import java.util.Arrays;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,6 +15,9 @@ import com.telusko.SpringMVCBoot.model.Coder;
 
 @Controller
 public class HomeController {
+	
+	@Autowired
+	CoderRepo repo;
 	
 	//Now let's say if we want to set a data value to a field in the JSP that can be set from here, how do we do that?
 	@ModelAttribute
@@ -85,6 +89,7 @@ public class HomeController {
 		// We can entirely remove the concept of Model object as it can be done by ModelAttribute on its own
 		// ONE MORE IMP THING TO NOTICE is that if we want we can entirely remove @ModelAttribute if we use the same class name "Coder" in the jsp file as "coder" then it will work as it is now, but that is not a good convention
 		//m.addAttribute("coder",c);
+		repo.save(c);
 		return "coders";
 	}
 	
@@ -99,8 +104,25 @@ public class HomeController {
 	
 	@GetMapping("showCoders")
 	public String showCoders(Model m) {
-		List<Coder> coders = Arrays.asList(new Coder(1,"Srinjay Saha"),new Coder(2,"Sanjay Saha"));
-		m.addAttribute("result",coders);
+		//List<Coder> coders = Arrays.asList(new Coder(1,"Srinjay Saha"),new Coder(2,"Sanjay Saha"));
+		//We are getting the object from the DB now using JPA Repository Methods
+		m.addAttribute("result",repo.findAll());
 		return "showCoders";
+	}
+	
+	@GetMapping("getCoder")
+	public String getCoder(@RequestParam("coderId") int cid, Model m) {
+		m.addAttribute("coder", repo.getOne(cid));
+		return "coders";
+	}
+	
+	@GetMapping("getCoderByName")
+	public String getCoderByName(@RequestParam String cname, Model m) {
+		// fetch matching coder(s) from DB
+	    List<Coder> coders = repo.find(cname);
+
+	    // add to model
+	    m.addAttribute("result", coders);
+		return "coders";
 	}
 }
