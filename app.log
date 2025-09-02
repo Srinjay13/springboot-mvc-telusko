@@ -1,0 +1,38 @@
+2025-09-02T21:19:31.278+05:30  INFO 21380 --- [SpringMVCBoot] [main] c.t.S.SpringMvcBootApplication           : Starting SpringMvcBootApplication using Java 17.0.10 with PID 21380 (D:\Spring Practice\SpringMVCBoot\target\classes started by Srinjay in D:\Spring Practice\SpringMVCBoot)
+2025-09-02T21:19:31.281+05:30  INFO 21380 --- [SpringMVCBoot] [main] c.t.S.SpringMvcBootApplication           : No active profile set, falling back to 1 default profile: "default"
+2025-09-02T21:19:32.163+05:30  INFO 21380 --- [SpringMVCBoot] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-02T21:19:32.232+05:30  INFO 21380 --- [SpringMVCBoot] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 55 ms. Found 1 JPA repository interface.
+2025-09-02T21:19:33.047+05:30  INFO 21380 --- [SpringMVCBoot] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-09-02T21:19:33.071+05:30  INFO 21380 --- [SpringMVCBoot] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-02T21:19:33.071+05:30  INFO 21380 --- [SpringMVCBoot] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2025-09-02T21:19:33.262+05:30  INFO 21380 --- [SpringMVCBoot] [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2025-09-02T21:19:33.268+05:30  INFO 21380 --- [SpringMVCBoot] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-09-02T21:19:33.269+05:30  INFO 21380 --- [SpringMVCBoot] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1928 ms
+2025-09-02T21:19:33.422+05:30  INFO 21380 --- [SpringMVCBoot] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-09-02T21:19:33.766+05:30  INFO 21380 --- [SpringMVCBoot] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@74fb5b59
+2025-09-02T21:19:33.768+05:30  INFO 21380 --- [SpringMVCBoot] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-09-02T21:19:33.822+05:30  INFO 21380 --- [SpringMVCBoot] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-02T21:19:33.908+05:30  INFO 21380 --- [SpringMVCBoot] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.26.Final
+2025-09-02T21:19:33.960+05:30  INFO 21380 --- [SpringMVCBoot] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-09-02T21:19:34.327+05:30  INFO 21380 --- [SpringMVCBoot] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-02T21:19:34.418+05:30  WARN 21380 --- [SpringMVCBoot] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-09-02T21:19:34.419+05:30  WARN 21380 --- [SpringMVCBoot] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-09-02T21:19:34.448+05:30  INFO 21380 --- [SpringMVCBoot] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-09-02T21:19:35.385+05:30  INFO 21380 --- [SpringMVCBoot] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-02T21:19:35.393+05:30  INFO 21380 --- [SpringMVCBoot] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-02T21:19:35.704+05:30  INFO 21380 --- [SpringMVCBoot] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-09-02T21:19:36.249+05:30  WARN 21380 --- [SpringMVCBoot] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-09-02T21:19:36.280+05:30  INFO 21380 --- [SpringMVCBoot] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2025-09-02T21:19:36.747+05:30  INFO 21380 --- [SpringMVCBoot] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-09-02T21:19:36.759+05:30  INFO 21380 --- [SpringMVCBoot] [main] c.t.S.SpringMvcBootApplication           : Started SpringMvcBootApplication in 6.042 seconds (process running for 6.938)
+2025-09-02T21:20:52.114+05:30  INFO 21380 --- [SpringMVCBoot] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-02T21:20:52.116+05:30  INFO 21380 --- [SpringMVCBoot] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-09-02T21:20:52.120+05:30  INFO 21380 --- [SpringMVCBoot] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2025-09-02T21:20:52.253+05:30  INFO 21380 --- [SpringMVCBoot] [http-nio-8080-exec-1] c.telusko.SpringMVCBoot.LoggingAspect    : getCoders method called
